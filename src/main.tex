@@ -1,0 +1,75 @@
+\documentclass[11p]{article}
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyheadings}
+\usepackage[swedish]{babel}
+\usepackage[
+    backend=biber,
+    style=authoryear-ibid,
+    sorting=ynt
+]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%Källor
+\addbibresource{references.bib}
+\graphicspath{ {./images/} }
+
+% Lite variabler
+\def\email{samuel.viglundsson@ga.ntig.se}
+\def\foottitle{PMmall}
+\def\name{Samuel Viglundsson}
+
+\title{PMmall \\ \small Gymnasiearbete}
+\author{\namn}
+\date{\today}
+
+\begin{document}
+
+
+% fixar sidfot
+\lfoot{\footnotesize{\name \\ \email}}
+\rfoot{\footnotesize{\today}}
+\lhead{\sc\footnotesize\foottitle}
+\rhead{\nouppercase{\sc\footnotesize\leftmark}}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+% i Sverige har vi normalt inget indrag vid nytt stycke
+\setlength{\parindent}{0pt}
+% men däremot lite mellanrum
+\setlength{\parskip}{10pt}
+
+\maketitle
+
+\section{Bakgrund}
+Min frågestälnning är hur gamification(spelifiering) samt spel-baserad inlärning(game-based learning) fungerar i praktiken.
+
+
+Gamification är att ta delarna som gör spel roliga in i lärande t.ex ha ett narrativ/story för det man gör, poäng system för att göra uppgifter, levlar och bossbattles, direkt feedback av arbete, achievements, tävla mot andra spelare eller dig själv. Jag kommer dels se vad rådande kunskapsläget är gällande gamficaitions effektvietet, dels se hur lärare och sånt känner om gamficifaiton och om det är någonting de använder i lärandet, och sist tänkte jag hålla något experiment där klassen(antaglig vår) får lära sig något nytt och några får lära sig med hjälp av gamfiication och andra inte för att se om det är någon skillnad. Inte ett perfekt experiment då inlärningstiden är så kort men det funkar.
+\section{Referenser}
+Referenser i text kan skrivas på två sätt: Enligt \textcite{} kan man använde två typer av referenser, inbäddade i texten eller ``efter'' ett fakta \parencite{Fraenkel}. Ett till test för att se hur det ser ut \parencite{fermi}.
+
+\section{Annat som kan vara bra att veta}
+Det är lätt att skriva matematik i \LaTeX
+
+\begin{equation}
+    F = G \frac{M m}{r^2}
+    \label{eq:grav}
+\end{equation}
+
+Ekvation (\ref{eq:grav}) känner ni igen...
+\clearpage
+\subsection{En underrubrik}
+    \begin{figure}[!h]
+        \includegraphics[width=0.8\textwidth]{accelerationTime.png}
+        \caption{Acceleration-tid diagram. Källa: \textcite{Fraenkel}}
+        \label{fig:acc}
+    \end{figure}
+
+Acceleration-tiddiagram (se figur \ref{fig:acc})
+
+\printbibliography
+
+\end{document}
