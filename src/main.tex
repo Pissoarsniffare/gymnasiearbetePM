@@ -60,27 +60,121 @@ Vi kommer att testa grupper av elever, där grupperna är NTI klasser eller gurn
 
 \subsection{Analys} Jag kommer såklart beräkna saker som medelvärde och felmarginal, kommer även använda regression för att se om vi kan hitta samband mellan spelifiering och resultat. Då resultaten är oparade, vad vi kan anta vara normalfördelade, så kan vi använda oparade T-testet för att testa om vår hypotes att ‘spelifiering ger bättre inlärning’ är sann givet datan.
 
+\section{Resultat:}
+\subsection{Test data:}
+Resultaten var enligt tabellen:
+\begin{center}
+    \begin{tabular}{ ||c |c c|| }
+        \hline
+        Fråga/antal rätt & icke-Spelifierad & spelifierad \\
+        \hline
+        \hline
+        1 & 21 & 18 \\
+        \hline
+        2 & 30 & 28 \\
+        \hline
+        3 & 22 & 25 \\
+        \hline
+        4 & 30 & 28 \\
+        \hline
+        5 & 28 & 26 \\
+        \hline
+        6 & 27 & 16 \\
+        \hline
+        7 & 31 & 29 \\
+        \hline
+        8 & 31 & 26 \\
+        \hline
+        9 & 30 & 21 \\
+        \hline
+        10 & 28 & 26 \\
+        \hline
+        11 & 26 & 18 \\
+        \hline
+        12 & 28 & 27 \\
+        \hline
+        13 & 21 & 10 \\
+        \hline
+        14 & 29 & 28 \\
+        \hline
+        15 & 27 & 16 \\
+        \hline
+        16 & 27 & 24 \\
+        \hline
+        17 & 26 & 24 \\
+        \hline
+        18 & 29 & 29 \\
+        \hline
+        19 & 30 & 27 \\
+        \hline
+        20 & 24 & 21 \\
+        \hline
+    \end{tabular}
+\end{center}
+\subsection{Statistisk analys:}
+För att analysera resultaten användes Welch t-test för att testa hypoteserna (1) både grupperna är lika och (2) icke-spelifierade gruppen preseterade bättre. Signifikans nivån av testet valdes till $0.05\%$ enligt standard. Welch t-test statistiska ges av
+\[ t(f)=\frac{(\overline{X_1}-\overline{X_2)}}{\sqrt{\frac{S_1^2}{n}+\frac{s_2^2}{n}}}
+\]
+Welch t-test antar ej gemensam varians och ger en mera komplicerad formel för 'degrees of freedom'
+\[f\approx \frac{(\frac{S^2_1}{n_1}+\frac{S^2_2}{n_2})^2}{\frac{S_1^4}{n_1^2(n_1-1)}+\frac{S_2^4}{n_2^2(n_2-1)}}\approx \frac{(\frac{(27.51)^2}{31}+\frac{(23.35)^2}{31})^2}{}=\frac{42^2}{30}\approx 58
+\]
+Analysen använde bästa heltals approximationen av denna frihet för statistik. Antalet deltagande i spelifierade och icke-spelifierade var detsamma $n=31$, medelvärdet för antalet test resultat var $\mu_1=27.25$ och $\mu_2=23.35$, för att estimera variansen i grupperna användes statistikan
+\[S^2=\frac{1}{n-1}\sum_{i=1}^{31}(x_i-\mu)^2
+\]
+och sist utgörs två sida K.I av
+\[\bigg[t_{-\frac{\alpha}{2}}\sqrt{\frac{S_1^2}{\sqrt{n}}+\frac{S_2^2}{\sqrt{n}}},t_{\frac{\alpha}{2}}\sqrt{\frac{S_1^2}{\sqrt{n}}+\frac{S_2^2}{\sqrt{n}}}\bigg]
+\]
+Medans den ensida ges av
+\[\bigg[t_{\frac{\alpha}{2}}\sqrt{\frac{S_1^2}{\sqrt{n}}+\frac{S_2^2}{\sqrt{n}}},\infty\bigg)
+\]
+icke-spelifierade: $S_2^2=\frac{1}{30}(838.75)\approx 27.9583$ och $\mu_2=27.25$ \\
+spelifierade gruppen: $S^2_1=\frac{1}{30}(534.55)\approx 17.8183$, $\mu_1=23.35$
+\\
+\\
+Vi får att kritiska värdet är $2$ om vi låter degrees of freedom vara 60, en nära approximation. Detta blir då $t=2$ och $\frac{a}{b}\approx 6.48$ vårat två sidiga test blir således $[-2\cdot6.38,2\cdot6.48]=[4.38,8,48]$ och då vårt test gav oss $27.25-23.35=3.9$ som inte är i denna intervall kan vi med $95\%$ säkerhet försäkra oss om att testet att grupperna ej presterande detsamma. Nu vill vi testa om icke-spelifierade gruppen presterade bättre vilket vi gör om vår skillnad blir större än $t_{0.05}\sqrt{\frac{S_1^2}{\sqrt{n}}+\frac{S_2^2}{\sqrt{n}}}$ vilket blir $t_{0.05}(60)\simeq 1.67$ och $6.38$ alltså får vi ånyo att vi inte kan förkasta nullhypotesen.
+\\
+\subsection{Enkät resultat:}
+Vi redovisar här enkätt frågorna och svaren:
+\\
+\textbf{Utveckla ditt svar från föregående fråga. Varför är det otroligt/troligt att du skulle inte använda/använda denna inlärningsmetoden igen?}
+\\
+\\
+-Lite för långsam men annars bra.\\
+Det är digitalt och därför är man va natt inte komma ihåg det för att det är inte viktigt.
+för det fungerade
+troligen för att jag gilla mer att använda internet en att använda papper och penna
+Detta är en inlärningsmetod som jag använt mig av tidigare och hjälper mig även hålla bättre fokus då det läggs till ett extra moment av tävling som ger mer insentiv att förbättra sina kunskaper.
+Jag har använt den tidigare, dock inte samma hemsida utan jag har då använt Quizlet. Det är enligt mig en mycket bra metod då det gör inlärningen mycket mer intressant och dessutom mycket enklare då datorn gör allt jobb med att rätta åt en.
+jag opererade inte det så mycket, skulle säkert gå bättre ifall jag gjort det
+Det är ett enkelt sätt att lära sig ord på. Men man måste kanske repetera samma ord ett par dagar så att det verkligen sitter. Så ganska likt ej spelifierad. En skillnad är att i början så kan det gå mycket snabbare att lära sig så det är bra.
+Det är en snabb och enkel metod för att komma ihåg saker under en kortare tid. Men den är inte så effektiv när man ska komma ihåg saker under en längre tid. Man förlitar sig mer på att vara snabb än effektiv, man skapar genvägar för att svara snabbare. Så som bara läsa första bokstäverna på orden då behöver man inte kunna hela ordet.
+Jag tror att jag skulle använda någonting likna det i fram tiden för att lära mig språk därför det var roligt detta spel och jag lärde mig mest när jag hade fel och det är var jag vill säga
+Jag lär nog använda en variant av den men inte direkt spelifiering, som till exempel glosplugg  webbsidor mm.
+Det var ganska lätt att lära sig och väldigt lättillgängligt.
+Det är troligt att jag kommer använda en spelifierad inlärningsmetod, men inte just den som användes i testet då denna hade väldigt långa cutscenes och det kändes trögt att genomföra uppgifterna.
+det är roligare
+Enda riktiga nackdelen som jag ser är faktumet att kortlekarna kan dra ut på inlärningen, men annars är det bra.
+Jag brukar ha lättare för att använda båda metoderna
+Det är ett bra sätt för att hålla fokus och då lättare kunna repetera.
+Med en leaderboard så blir framförallt det mer en tävling och att tävla mot andra bidrar till att jag har högre  och man kan komma tillbaka för att improva sin score
+jag tycker att jag lär mig mindre med gamification men den tar mitt focus och jag har väldigt svårt för att consentrera mig i vanliga fall så det hjälper mig göra något i allafall
+för att de är bara roligt en stund och att de går inte att anpassa för allt vi måste lära oss
+Jag skulle använda den igen om jag behöver lära mig fakta, dock  inte om jag måste förstå något koncept
+jag tycker det är en metod som gör studier roligare och då är det lättare att lära sig någonting
+Det är troligt eftersom det var kul men jag vet inte när jag ska använda denna inlärningsmetod eftersom vi inte har så mycket glosor.
+Det var roliga spel och man fick veta ganska snabb om man hade fel eller inte
+jag kommer kanske använda det för det var rolight
+Orden sätter sig efter varje gång
+Det är smidigare än att jobba på papper
+Animationerna tar 2 år och jag lär mig känna igen bilder istället för att lära mig ord
+jag använder duolingo och det är bra��
+Eftersom det är ett enkelt sätt att lära sig nytt språk
+Skulle troligtvis använda en liknande metod för att lära mig vocab, men inte grammatik, meningar etc. Metoden har sina begränsningar eftersom att den inte bygger någon verklig förståelse utan endast går ut på att memorera vad som hör ihop med vad.
+
+\section{Diskussion:} Experimentets resultat var en blandning av väntat och oväntat, jag hade inte förväntat mig att båda grupperna skulle prestera, inom statisitksa gränser, detsamma och än mindre hade jag förväntat mig att
+\\
+
 \section{Referenser}
-Då gamification som koncept är ganska nytt finns inte speciellt många studier som pratar om just gamficiations effektivetet som jag har förståt det. Jag ska läsa delar av 'Det Spelifierade klassrummet' av Adam Palmquist för refrenser om vad exakt gamifictaion är och hur man använder det. Jag ska även intervjua en lärare på dragonen som specialiserar sig på gamification: Niclas Lind heter han, Niclas har jättemycket erfarenhet med gamification. Jag ska spela in intervjuvn(givetviss kollade jag så det är okej innan, det är okej) och kan skicka kopia till er sen om ni vill. Jag tror att boken och Niclas kunskap kommer att räcka som källor för de mesta, men kan hända att jag tar upp någonting mer om jag känner det skulle behövas.
-\section{Annat som kan vara bra att veta}
-Det är lätt att skriva matematik i \LaTeX
-
-\begin{equation}
-    F = G \frac{M m}{r^2}
-    \label{eq:grav}
-\end{equation}
-
-Ekvation (\ref{eq:grav}) känner ni igen...
-\clearpage
-\subsection{En underrubrik}
-    \begin{figure}[!h]
-        \includegraphics[width=0.8\textwidth]{accelerationTime.png}
-        \caption{Acceleration-tid diagram. Källa: \textcite{Fraenkel}}
-        \label{fig:acc}
-    \end{figure}
-
-Acceleration-tiddiagram (se figur \ref{fig:acc})
-
-\printbibliography
 
 \end{document}
+
